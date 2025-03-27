@@ -1,0 +1,15 @@
+spring:
+  application.name: chat-bot
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5430/chat-bot
+
+
+telegram.bot:
+  token: 8105529885:AAHIZb1ztjaN1aKExOS79bCec1l4fUQLdrI
+  username: PhoneLowPriceFinderBot
+
+
+
+
