@@ -1,0 +1,5 @@
+spring:
+  application.name: parser-service
+  data.mongodb.uri: mongodb://parser:parser@localhost:27017/parser-db
+
+logging.level.kg.kazbekov.parserservice: DEBUG

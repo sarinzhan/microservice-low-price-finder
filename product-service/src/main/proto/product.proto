@@ -1,0 +1,59 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "kg.kazbekov.productservice.grpc";
+option java_outer_classname = "ProductProto";
+
+service ProductService{
+  rpc getProductByModel (ProductByModelRequest) returns (ProductByModelResponse);
+  rpc getAllManufacture(AllRequest) returns (AllResponse);
+  rpc getModelsByManufacture (ModelByManufactureRequest) returns (ModelByManufactureResponse);
+  rpc subscribeUserOnModelPriceChange(SubscribeUserOnModelPriceChangeRequest) returns (SubscribeUserOnModelPriceChangeResponse);
+}
+
+message ProductByModelRequest{
+  string modelId = 1;
+}
+message ProductByModelResponse{
+  repeated Product products = 1;
+}
+message Product{
+  string id = 1;
+  int32 ram = 2;
+  int32 storage = 3;
+  int32 price = 4;
+  string url = 5;
+}
+
+
+message AllRequest{}
+message AllResponse{
+  repeated Manufacture manufacturies = 1;
+}
+
+message Manufacture{
+  string id = 1;
+  string name = 2;
+}
+
+
+message ModelByManufactureRequest{
+  string manufactureId = 1;
+}
+message ModelByManufactureResponse{
+  repeated Model models = 1;
+}
+message Model{
+  string id = 1;
+  string name = 2;
+  int32 quantity = 3;
+}
+
+message SubscribeUserOnModelPriceChangeRequest{
+  int64 chatId = 1;
+  string modelId = 2;
+}
+
+message SubscribeUserOnModelPriceChangeResponse{
+  string answer = 1;
+}

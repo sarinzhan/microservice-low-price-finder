@@ -11,8 +11,9 @@ import java.util.List;
 public class Manufacture {
     @Id
     private String id;
-
     private String name;
 
-    private List<Model> models;
+    public Manufacture(String name) {
+        this.name = name;
+    }
 }

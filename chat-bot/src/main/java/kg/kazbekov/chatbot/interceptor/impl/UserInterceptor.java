@@ -1,7 +1,7 @@
 package kg.kazbekov.chatbot.interceptor.impl;
 
 import kg.kazbekov.chatbot.interceptor.Interceptor;
-import kg.kazbekov.chatbot.service.UserService;
+import kg.kazbekov.chatbot.service.internal.UserService;
 import kg.kazbekov.chatbot.util.RequestType;
 import kg.kazbekov.chatbot.util.TelegramRequest;
 import lombok.RequiredArgsConstructor;

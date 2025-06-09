@@ -25,7 +25,7 @@ public class BotInitialization extends TelegramLongPollingBot {
     @Value("${telegram.bot.token}")
     private String token;
 
-    @Value("${telegram.bot.username")
+    @Value("${telegram.bot.username}")
     private String username;
 
     @Autowired

@@ -1,5 +1,6 @@
 spring:
   application.name: chat-bot
+  kafka.bootstrap-servers: 35.239.109.122:9094
   datasource:
     username: postgres
     password: postgres
@@ -7,8 +8,12 @@ spring:
 
 
 telegram.bot:
-  token: 8105529885:AAHIZb1ztjaN1aKExOS79bCec1l4fUQLdrI
-  username: PhoneLowPriceFinderBot
+    token: 8105529885:AAHIZb1ztjaN1aKExOS79bCec1l4fUQLdrI
+      username: PhoneLowPriceFinderBot
+
+grpc.client.productService:
+  address: 'static://localhost:9090'
+  negotiation-type: plaintext
 
 
 

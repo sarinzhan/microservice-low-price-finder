@@ -1,0 +1,12 @@
+spring:
+    application.name: product-service
+    data.mongodb.uri: mongodb://product:product@localhost:27017/product-db
+    kafka.bootstrap-servers: 35.239.109.122:9094
+grpc.server:
+#    address: *
+    port: 9090
+
+service.external.parser.url: http://34.55.22.93:65064/phone
+server.port: 8080
+
+

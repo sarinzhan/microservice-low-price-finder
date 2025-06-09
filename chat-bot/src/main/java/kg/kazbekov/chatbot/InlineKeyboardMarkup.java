@@ -17,7 +17,6 @@ public class InlineKeyboardMarkup {
     public InlineKeyboardMarkup() {
         buttons = new ArrayList<>();
         row = new ArrayList<>();
-        buttons.add(row);
     }
 
     public InlineKeyboardMarkup button(String text, String callBackData){
@@ -40,6 +39,9 @@ public class InlineKeyboardMarkup {
     }
 
     public org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup build(){
+        if(!row.isEmpty()){
+            buttons.add(row);
+        }
         return new org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup(buttons);
     }
 }
